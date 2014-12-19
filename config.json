@@ -1,0 +1,40 @@
+{
+  "vm": {
+    "ip": "192.168.44.44",
+    "memory": "41024",
+    "synced_folders": [
+      {
+        "host_path": "data/",
+        "guest_path": "/var/www",
+        "type": "default"
+      },
+      {
+        "host_path": "/Users/ali/.drush",
+        "guest_path": "/home/vagrant/.drush",
+        "type": "default"
+      },
+      {
+        "host_path": "/Users/ali/.acquia",
+        "guest_path": "/home/vagrant/.acquia",
+        "type": "default"
+      }
+    ],
+    "forwarded_ports": []
+  },
+  "vdd": {
+    "sites": {
+      "jjbos": {
+        "account_name": "root",
+        "account_pass": "root",
+        "account_mail": "box@example.com",
+        "site_name": "jjbos",
+        "site_mail": "box@example.com",
+        "vhost": {
+          "document_root": "jnj/docroot",
+          "url": "sandbox.jjbos.vdev",
+          "alias": ["*.jjbos.vdev"]
+        }
+      }
+    }
+  }
+}
