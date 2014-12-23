@@ -184,23 +184,25 @@ valid. http://jsonlint.com/ can help to check it.
         be used for creating subdirectory for site, Drush alias name, database
         name, etc._
 
-          * TODO `account_name (string, required)`
-            _Drupal administrator user name._
 
-          * TODO `account_pass (string, required)`
-            _Drupal administrator password._
+            * TODO `account_name (string, required)`
+              _Drupal administrator user name._
 
-          * TODO `account_mail (string, required)`
-            _Drupal administrator email._
+            * TODO `account_pass (string, required)`
+              _Drupal administrator password._
 
-          * `site_name (string, required)`
-            _drupal site name._ And he mysql database name that will be created.
+            * TODO `account_mail (string, required)`
+              _Drupal administrator email._
 
-          * `site_mail (string, required)`
-            _Drupal site email._
+            * `site_name (string, required)`
+              _drupal site name._ 
 
-         * `repo_url (string, required)`
-            _The site repo URL used to clone.._
+            * `site_mail (string, required)`
+              _Drupal site email._
+
+           * `repo_url (string, required)`
+              _The site repo URL used to clone.._
+
 
 
 If you find a problem, incorrect comment, obsolete or improper code or such,
