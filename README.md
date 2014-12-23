@@ -3,7 +3,7 @@ Note:
 
 _This is a modified version of the VDD project that can be found at._ https://drupal.org/node/2008758.
 
-It extends the recipes and config.json
+It extends the recipes,vagrantfile, and config.json
 
 See config.json description below for information.
 
