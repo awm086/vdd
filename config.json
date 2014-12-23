@@ -30,7 +30,7 @@
         "site_name": "jjbos",
         "site_mail": "box@example.com",
         "vhost": {
-          "root_directory": "JandJ",
+          "app_root": "JandJ",
           "document_root": "JandJ/docroot",
           "url": "sandbox.jjbos.vdev",
           "alias": ["*.jjbos.vdev"]

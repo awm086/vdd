@@ -3,7 +3,7 @@ if node["vdd"]["sites"]
   node["vdd"]["sites"].each do |index, site|
     include_recipe "database::mysql"
 
-    htdocs = defined?(site["vhost"]["root_directory"]) ? site["vhost"]["root_directory"] : index
+    htdocs = defined?(site["vhost"]["app_root"]) ? site["vhost"]["app_root"] : index
 
     # Avoid potential duplicate slash in docroot path from config.json input.
     if htdocs.start_with?("/")
