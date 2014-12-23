@@ -52,7 +52,9 @@ the source code.
      VDD's main page. Main page has links to configured sites, development tools
      and list of frequently asked questions.
 
-  8.For SSH Agent Forwarding to work from within Vagrant (i.e., use your SSH keys from within your 'host' account from within Vagrant), you must add something along these lines to your .bashrc (or equiv) file - see https://coderwall.com/p/p3bj2a : key_file=~/.ssh/id_rsa && [[ -z $(ssh-add -L | grep $key_file) ]] && ssh-add $key_file
+  8.For SSH Agent Forwarding to work from within Vagrant (i.e., use your SSH keys from within your 'host' account from within Vagrant)
+    , you must add something along these lines to your .bashrc (or equiv) file - see https://coderwall.com/p/p3bj2a : 
+    `key_file=~/.ssh/id_rsa && [[ -z $(ssh-add -L | grep $key_file) ]] && ssh-add $key_file`
 
 Now you have ready to use virtual development server. By default 2 sites
 are configured: Drupal 7 and Drupal 8. You can add new ones in config.json file
