@@ -124,6 +124,76 @@ Remote cookbook using berkshelf
     $ berks vendor chef/cookbooks/berks
 
 
+config.json description
+=======================
+
+`config.json` is the main configuration file. Data from `config.json` is used to
+configure virtual machine. After editing file make sure that your JSON syntax is
+valid. http://jsonlint.com/ can help to check it.
+
+
+  * `ip (string, required)`
+    _Static IP address of virtual machine. It is up to the users to make sure
+    that the static IP doesn't collide with any other machines on the same
+    network. While you can choose any IP you'd like, you should use an IP from
+    the reserved private address space._
+
+  * `memory (string, required)`
+    _RAM available to virtual machine. Minimum value is 1024._
+
+  * `synced_folder (object of strings, required)`
+    _Synced folder configuration._
+
+      * `host_path (string, required)`
+        _A path to a directory on the host machine. If the path is relative, it
+        is relative to VDD root._
+
+      * `guest_path (string, required)`
+        _Must be an absolute path of where to share the folder within the guest
+        machine._
+
+  * @TODO `php (object of strings, required)`
+    _PHP configuration._
+
+      * `version (string or false, required)`
+        _Desired PHP version. Please, see http://www.php.net/releases for proper
+        version numbers. If you would like to use standard Ubuntu package you
+        should set number to "false". Example: "version": false._
+
+  * @TODO `mysql (object of strings, required)_`
+    _MySQL configuration._
+
+      * `server_root_password (string, required)`
+        _MySQL server root password._
+
+  * `sites (object ob objects, required)`
+    _List of sites (similar to virtual hosts) to configure. At least one site is
+    required._
+
+      * `Key (string, required)`
+        _Machine name of a site. Name should fit expression '[^a-z0-9_]+'. Will
+        be used for creating subdirectory for site, Drush alias name, database
+        name, etc._
+
+          * TODO `account_name (string, required)`
+            _Drupal administrator user name._
+
+          * TODO `account_pass (string, required)`
+            _Drupal administrator password._
+
+          * TODO `account_mail (string, required)`
+            _Drupal administrator email._
+
+          * `site_name (string, required)`
+            _drupal site name._ And he mysql database name that will be created.
+
+          * `site_mail (string, required)`
+            _Drupal site email._
+
+         * `repo_url (string, required)`
+            _The site repo URL used to clone.._
+
+
 If you find a problem, incorrect comment, obsolete or improper code or such,
 please let us know by creating a new issue at
 http://drupal.org/project/issues/vdd
