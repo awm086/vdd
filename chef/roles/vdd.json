@@ -37,7 +37,7 @@
     "recipe[vdd::patchutils]",
     "recipe[vdd::siege]",
     "recipe[vdd_example]",
-    "recipe[JandJ]"
+    "recipe[JandJ::git_repo]"
   ],
   "description": "Installs Drupal development environment.",
   "chef_type": "role"
