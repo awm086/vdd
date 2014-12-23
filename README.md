@@ -1,7 +1,7 @@
 
 Note: 
 
-_This is a modified version of the VDD project that can be found at https://drupal.org/node/2008758._
+_This is a modified version of the VDD project that can be found at._ https://drupal.org/node/2008758.
 
 It extends the recipes and config.json
 
