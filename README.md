@@ -1,4 +1,13 @@
 
+Note: 
+_This is a modified version of the VDD project that can be found at
+https://drupal.org/node/2008758._
+
+It extends the recipes and config.json
+
+See config.json description below for information.
+
+
 Vagrant Drupal Development
 --------------------------
 
