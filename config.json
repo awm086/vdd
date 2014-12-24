@@ -29,7 +29,7 @@
         "account_mail": "box@example.com",
         "site_name": "jjbos",
         "site_mail": "box@example.com",
-        "repo_url": "git@github.com:awm086/conf.git",
+        "repo_url": "git@github.com:awm086/JandJ.git",
         "vhost": {
           "app_root": "JandJ",
           "document_root": "JandJ/docroot",

@@ -24,6 +24,7 @@ Vagrant.configure("2") do |config|
   end
 
   # Turn off StrictHostKeyChecking for vagrant user
+  # @TODO make this nicer with variables rather than inline commands
   config.vm.provision :shell do |shell|
      file = "/root/.ssh/config"
      shell.inline = "mkdir -p /root/.ssh/ && touch #{file} " +
