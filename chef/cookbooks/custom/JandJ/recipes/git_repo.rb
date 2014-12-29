@@ -9,8 +9,6 @@ if node["vdd"]["sites"]
 	    repository repo_url 
 	    revision "master"
 	    action :sync
-	    user 'vagrant'
-	    group 'vagrant'
 	  end
     
 	end
