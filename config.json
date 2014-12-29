@@ -6,7 +6,7 @@
       {
         "host_path": "data/",
         "guest_path": "/var/www",
-        "type": "default"
+        "type": "rsync"
       },
       {
         "host_path": "/Users/ali/.drush",

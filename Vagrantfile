@@ -52,6 +52,8 @@ Vagrant.configure("2") do |config|
         # This uses uid and gid of the user that started vagrant.
         config.nfs.map_uid = Process.uid
         config.nfs.map_gid = Process.gid
+      when "rsync"
+        config.vm.synced_folder folder["host_path"], folder["guest_path"], type: "rsync"  
       else
         config.vm.synced_folder folder["host_path"], folder["guest_path"]
       end
