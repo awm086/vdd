@@ -1,0 +1,6 @@
+<?php
+<% @node["vdd"]["sites"].each do |index, site| %>
+<% site['sub_sites'].each do |index2, sub_site| %>
+$sites["<%= sub_site["site_vhost_prefix"]%>.jjbos.vdev"] = '<%= sub_site["site_dir"] %>';
+<% end %>
+<% end %>

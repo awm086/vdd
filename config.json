@@ -6,12 +6,12 @@
       {
         "host_path": "data/",
         "guest_path": "/var/www",
-        "type": "rsync"
+        "type": "default"
       },
       {
         "host_path": "/Users/ali/.drush",
         "guest_path": "/home/vagrant/.drush",
-        "type": "default"
+        "type": "nfs"
       },
       {
         "host_path": "/Users/ali/.acquia",
@@ -29,7 +29,21 @@
         "account_mail": "box@example.com",
         "site_name": "jjbos",
         "site_mail": "box@example.com",
-        "repo_url": "git@github.com:awm086/JandJ.git",
+        "repo_url": "ssh://git@dev-stash.jjconsumer.com:7999/~amustafa/jjbos-platform.git",
+        "sub_sites":{
+          "sandbox":{
+            "site_dir": "sandbox",
+            "site_vhost_prefix": "sandbox",
+            "database_name": "sandbox",
+            "database_prefix": ""
+          },
+          "testsite":{
+            "site_dir": "testsite",
+            "site_vhost_prefix": "testsite",
+            "database_name": "testsite",
+            "database_prefix": ""
+          }          
+        },
         "vhost": {
           "app_root": "JandJ",
           "document_root": "JandJ/docroot",
@@ -37,13 +51,6 @@
           "alias": ["*.jjbos.vdev"]
         }
       }
-    }
-  },
-  "oh-my-zsh": {
-    "users": {
-      "login": "vagrant",
-      "theme": "rachel",
-      "plugins": ["git"]
     }
   }
 }

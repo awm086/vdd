@@ -38,6 +38,7 @@
     "recipe[vdd::siege]",
     "recipe[vdd_example]",
     "recipe[JandJ::git_repo]",
+    "recipe[JandJ::sites_local_php]",
     "recipe[oh-my-zsh-chef]"
   ],
   "description": "Installs Drupal development environment.",
