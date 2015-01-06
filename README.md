@@ -141,6 +141,7 @@ configure virtual machine. After editing file make sure that your JSON syntax is
 valid. http://jsonlint.com/ can help to check it.
 
 
+
   * `ip (string, required)`
     _Static IP address of virtual machine. It is up to the users to make sure
     that the static IP doesn't collide with any other machines on the same
@@ -162,7 +163,7 @@ valid. http://jsonlint.com/ can help to check it.
         machine._
 
       * `type (string, Optional)`
-        _ For example default, rsync, nfs. _
+        _For example default, rsync, nfs. _
         Note: At the current stage, the only wway to get nfs to work is to set it for default at the initial 
         creation of the vm and then modify config.json to set the type to nfs and run Vagrant reload. 
 
