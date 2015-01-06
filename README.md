@@ -195,9 +195,17 @@ valid. http://jsonlint.com/ can help to check it.
                       _Name of the site directory within the sites directory._ 
                   * `site_vhost_prefix (string, required)` _Used in sites.pho for example`site_vhost_prefix.jjbos.vdev`. See vhost entry._                     
                   * `database_name (string, required)`  _The database for the subsite._  
-                      
-                
-     
+                    ```  
+                    Eample: 
+                      "sub_sites":{
+                        "sandbox":{
+                          "site_dir": "sandbox",
+                          "site_vhost_prefix": "sandbox",
+                          "database_name": "sandbox",
+                          "database_prefix": ""
+                        },
+                        
+                     ```   
 
 
 If you find a problem, incorrect comment, obsolete or improper code or such,
