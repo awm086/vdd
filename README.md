@@ -185,10 +185,12 @@ valid. http://jsonlint.com/ can help to check it.
     _List of sites (similar to virtual hosts) to configure. At least one site is
     required._
 
+      
       * `Key (string, required)`
         _Machine name of a site. Name should fit expression '[^a-z0-9_]+'. Will
         be used for creating subdirectory for site, Drush alias name, database
         name, etc._
+        
         * `site_name (string, required)`
            _drupal site name._ 
 
