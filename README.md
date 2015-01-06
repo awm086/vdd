@@ -161,6 +161,11 @@ valid. http://jsonlint.com/ can help to check it.
         _Must be an absolute path of where to share the folder within the guest
         machine._
 
+      * `type (string, Optional)`
+        _ For example default, rsync, nfs. _
+        Note: At the current stage, the only wway to get nfs to work is to set it for default at the initial 
+        creation of the vm and then modify config.json to set the type to nfs and run Vagrant reload. 
+
   * @TODO `php (object of strings, required)`
     _PHP configuration._
 
@@ -185,15 +190,6 @@ valid. http://jsonlint.com/ can help to check it.
         name, etc._
 
 
-            * TODO `account_name (string, required)`
-              _Drupal administrator user name._
-
-            * TODO `account_pass (string, required)`
-              _Drupal administrator password._
-
-            * TODO `account_mail (string, required)`
-              _Drupal administrator email._
-
             * `site_name (string, required)`
               _drupal site name._ 
 
@@ -202,6 +198,26 @@ valid. http://jsonlint.com/ can help to check it.
 
            * `repo_url (string, required)`
               _The site repo URL used to clone.._
+
+           * `sub_sites (string, optional)`
+              _ For multisite support this defines the sites within a drupal install._
+
+              * `Key (string, required)`        
+                 _Machine name of a site. Name should fit expression '[^a-z0-9_]+'. Will
+                 be used for creating subdirectory for site, Drush alias name, database
+                name, etc._  
+
+                  * `site_dir (string, required)`        
+                      _Name of the site directory within the sites directory._ 
+
+                  * `site_vhost_prefix (string, required)`        
+                      _._  
+                
+                  * `database_name (string, required)`        
+                      _Name of the site directory within the sites directory._  
+                
+                
+           
 
 
 
