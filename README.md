@@ -207,15 +207,15 @@ valid. http://jsonlint.com/ can help to check it.
             be used for creating subdirectory for site, Drush alias name, database
             name, etc._  
 
-              * `site_dir (string, required)`        
-                _Name of the site directory within the sites directory._ 
+            * `site_dir (string, required)`        
+              _Name of the site directory within the sites directory._ 
 
-              * `site_vhost_prefix (string, required)`        
-                 _Used in sites.pho for example`site_vhost_prefix.jjbos.vdev`. See vhost entry._  
-                    
-             * `database_name (string, required)`        
-                _The database for the subsite._  
-                    
+            * `site_vhost_prefix (string, required)`        
+               _Used in sites.pho for example`site_vhost_prefix.jjbos.vdev`. See vhost entry._  
+                  
+           * `database_name (string, required)`        
+              _The database for the subsite._  
+                  
                 
      
 
