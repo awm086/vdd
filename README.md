@@ -184,7 +184,6 @@ valid. http://jsonlint.com/ can help to check it.
   * `sites (object ob objects, required)`
     _List of sites (similar to virtual hosts) to configure. At least one site is
     required._
-
       
       * `Key (string, required)`
         _Machine name of a site. Name should fit expression '[^a-z0-9_]+'. Will
