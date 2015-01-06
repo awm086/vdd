@@ -189,7 +189,6 @@ valid. http://jsonlint.com/ can help to check it.
         _Machine name of a site. Name should fit expression '[^a-z0-9_]+'. Will
         be used for creating subdirectory for site, Drush alias name, database
         name, etc._
-        
         * `site_name (string, required)`
            _drupal site name._ 
 
