@@ -196,6 +196,7 @@ valid. http://jsonlint.com/ can help to check it.
                   * `site_vhost_prefix (string, required)` _Used in sites.pho for example`site_vhost_prefix.jjbos.vdev`. See vhost entry._                     
                   * `database_name (string, required)`  _The database for the subsite._  
                    Example: 
+                   
                       "sub_sites":{
                         "sandbox":{
                           "site_dir": "sandbox",
