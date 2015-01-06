@@ -189,37 +189,35 @@ valid. http://jsonlint.com/ can help to check it.
         _Machine name of a site. Name should fit expression '[^a-z0-9_]+'. Will
         be used for creating subdirectory for site, Drush alias name, database
         name, etc._
+        
+        * `site_name (string, required)`
+           _drupal site name._ 
 
+        * `site_mail (string, required)`
+           _Drupal site email._
 
-            * `site_name (string, required)`
-              _drupal site name._ 
+        * `repo_url (string, required)`
+           _The site repo URL used to clone.._
 
-            * `site_mail (string, required)`
-              _Drupal site email._
+        * `sub_sites (string, optional)`
+           _ For multisite support this defines the sites within a drupal install._
 
-           * `repo_url (string, required)`
-              _The site repo URL used to clone.._
+          * `Key (string, required)`        
+            _Machine name of a site. Name should fit expression '[^a-z0-9_]+'. Will
+            be used for creating subdirectory for site, Drush alias name, database
+            name, etc._  
 
-           * `sub_sites (string, optional)`
-              _ For multisite support this defines the sites within a drupal install._
+          * `site_dir (string, required)`        
+            _Name of the site directory within the sites directory._ 
 
-              * `Key (string, required)`        
-                 _Machine name of a site. Name should fit expression '[^a-z0-9_]+'. Will
-                 be used for creating subdirectory for site, Drush alias name, database
-                name, etc._  
-
-                  * `site_dir (string, required)`        
-                      _Name of the site directory within the sites directory._ 
-
-                  * `site_vhost_prefix (string, required)`        
-                      _._  
+          * `site_vhost_prefix (string, required)`        
+             _Used in sites.pho for example`site_vhost_prefix.jjbos.vdev`. See vhost entry._  
                 
-                  * `database_name (string, required)`        
-                      _Name of the site directory within the sites directory._  
+         * `database_name (string, required)`        
+            _The database for the subsite._  
                 
                 
-           
-
+     
 
 
 If you find a problem, incorrect comment, obsolete or improper code or such,
