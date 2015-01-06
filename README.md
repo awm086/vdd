@@ -185,20 +185,11 @@ valid. http://jsonlint.com/ can help to check it.
     _List of sites (similar to virtual hosts) to configure. At least one site is
     required._
       
-      * `Key (string, required)`
-        _Machine name of a site. Name should fit expression '[^a-z0-9_]+'. Will
-        be used for creating subdirectory for site, Drush alias name, database
-        name, etc._  
-             * `site_name (string, required)` _drupal site name._ 
-             * `site_mail (string, required)` _Drupal site email._ 
-
-
-
-
-
-             * `repo_url (string, required)` _The site repo URL used to clone._
-
-             * `sub_sites (string, optional)` _ For multisite support this defines the sites within a drupal install._
+      * `Key (string, required)` _Machine name of a site. Name should fit expression '[^a-z0-9_]+'. Will be used for creating subdirectory for site, name, database. name, etc._
+          * `site_name (string, required)` _drupal site name._ 
+          * `site_mail (string, required)` _Drupal site email._ 
+          * `repo_url (string, required)` _The site repo URL used to clone._
+          * `sub_sites (string, optional)` _ For multisite support this defines the sites within a drupal install._
 
                 * `Key (string, required)`        
                   _Machine name of a site. Name should fit expression '[^a-z0-9_]+'. Will
