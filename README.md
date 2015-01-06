@@ -211,7 +211,7 @@ valid. http://jsonlint.com/ can help to check it.
           * `app_root (string, required)` _The app root directory (different than docroot)_
           * `docroot (string, required)` _Apache docroot. For example: OS Platform docroot is within the Approot_
           * `url (string, required)` _The main vhost for the Site (Not subite). Example: jj.local_
-          * `alias (string, required)` _Must follow this pattern *.jj.local where * is going to be replaced with each subsite site_vhost_prefix that will have an entry in sites.php. The _
+          * `alias (string, required)` _Must follow this pattern *.jj.local where * is going to be replaced with each subsite site_vhost_prefix that will have an entry in sites.php._
 
 If you find a problem, incorrect comment, obsolete or improper code or such,
 please let us know by creating a new issue at
