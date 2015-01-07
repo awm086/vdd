@@ -39,7 +39,12 @@
     "recipe[vdd_example]",
     "recipe[JandJ::git_repo]",
     "recipe[JandJ::sites_local_php]",
-    "recipe[oh-my-zsh-chef]"
+    "recipe[oh-my-zsh-chef]",
+    "recipe[java]",
+    "recipe[ark]",
+    "recipe[drupal-chef-solr]",
+    "recipe[drupal-chef-solr::drupal]",
+    "recipe[drupal-chef-solr::drupal_schema]"
   ],
   "description": "Installs Drupal development environment.",
   "chef_type": "role"
