@@ -1,8 +1,0 @@
-#!/bin/bash
-
-cd <%= @solr_dir %>/example
-COMMAND="java -Xms128M -Xmx512M -Djetty.port=<%= @port %> -jar start.jar"
-nohup $COMMAND > <%= @log_file %> 2>&1 &
-echo $! > <%= @pid_file %>
-echo "Starting solr " <%= @log_file %>
-exit $?
