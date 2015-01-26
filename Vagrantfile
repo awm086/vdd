@@ -64,6 +64,10 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, :path => "chef/shell/initial.sh"
 
   # Customize provisioner.
+  
+  config_json["map"]["uid"] = Process.uid
+  config_json["map"]["gid"] = Process.gid
+
   config.vm.provision :chef_solo do |chef|
     chef.json = config_json
     chef.custom_config_path = "chef/solo.rb"

@@ -6,7 +6,7 @@
 // Example:
 // $acquia_settings_name = 'jnjbos/product1';
 
-if (!isset($acquia_settings_name)){
+if (isset($_ENV['AH_SITE_ENVIRONMENT']) && !isset($acquia_settings_name)){
   exit();
 }
 

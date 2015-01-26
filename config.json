@@ -4,9 +4,9 @@
     "memory": "41024",
     "synced_folders": [
       {
-        "host_path": "data/",
+        "host_path": "/Users/ali/devbox/vdd/data",
         "guest_path": "/var/www",
-        "type": "default"
+        "type": "nfs"
       },
       {
         "host_path": "/Users/ali/.drush",
@@ -16,10 +16,14 @@
       {
         "host_path": "/Users/ali/.acquia",
         "guest_path": "/home/vagrant/.acquia",
-        "type": "default"
+        "type": "nfs"
       }
     ],
     "forwarded_ports": []
+  },
+  "map": {
+    "uid": "",
+    "gid": ""
   },
   "vdd": {
     "sites": {
