@@ -214,8 +214,9 @@ valid. http://jsonlint.com/ can help to check it.
           * `docroot (string, required)` _Apache docroot. For example: OS Platform docroot is within the Approot_
           * `domain (string, required)` _The main vhost for the Site (Not subsite). Example: jjbos.vdev or jjbos.local
           * `alias (string, required)` _Must follow this pattern *.domain where * is going to be replaced with each subsite site_vhost_prefix that will have an entry in sites.php._
-      
+
 
 If you find a problem, incorrect comment, obsolete or improper code or such,
 please let us know by creating a new issue at
-http://drupal.org/project/issues/vdd
+https://www.jjconsumer.com/jira/
+
