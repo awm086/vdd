@@ -1,0 +1,13 @@
+<?php
+
+<% @node["vdd"]["sites"].each do |index, site| %>
+<% site['sub_sites'].each do |index2, sub_site| %>
+// Drush alias for <%= index %>
+$aliases['<%= index2 %>'] = array(
+  'root' => '/var/www/<%= defined?(site["vhost"]["document_root"]) ? site["vhost"]["document_root"] : index %>',
+  'uri' => '<%= defined?(sub_site["site_vhost_prefix"]) ? sub_site["site_vhost_prefix"] + "." +  site["vhost"]["domain"]: node["vm"]["ip"] + "/" + index2 %>',
+);
+
+<% end %>
+
+<% end %>

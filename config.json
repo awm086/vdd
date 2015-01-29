@@ -4,7 +4,7 @@
     "memory": "41024",
     "synced_folders": [
       {
-        "host_path": "/Users/ali/devbox/vdd/data",
+        "host_path": "data",
         "guest_path": "/var/www",
         "type": "nfs"
       },
