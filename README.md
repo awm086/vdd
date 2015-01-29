@@ -195,7 +195,7 @@ valid. http://jsonlint.com/ can help to check it.
               * `Key (string, required)`  _Machine name of a site. Name should fit expression '[^a-z0-9_]+'. Will be used for creating subdirectory for site, Drush alias name, database name, etc._  
                   * `site_dir (string, required)`        
                       _Name of the site directory within the sites directory._ 
-                  * `site_vhost_prefix (string, required)` _Used in sites.pho for example`site_vhost_prefix.jjbos.vdev`. See vhost entry._                     
+                  * `site_vhost_prefix (string, required)` _Used in sites.php for example`site_vhost_prefix.jjbos.vdev`. See vhost entry._                     
                   * `database_name (string, required)`  _The database for the subsite._  
                    * `database_prefix (string, required)`  _The database tables prfix. Corresponds to `prefix` in drupal settings.php ._  
                    Example: 
@@ -212,8 +212,9 @@ valid. http://jsonlint.com/ can help to check it.
       * `vhost (string, required)` _Vhost Specific configuration._
           * `app_root (string, required)` _The app root directory (different than docroot)_
           * `docroot (string, required)` _Apache docroot. For example: OS Platform docroot is within the Approot_
-          * `url (string, required)` _The main vhost for the Site (Not subite). Example: jj.local_
-          * `alias (string, required)` _Must follow this pattern *.jj.local where * is going to be replaced with each subsite site_vhost_prefix that will have an entry in sites.php._
+          * `domain (string, required)` _The main vhost for the Site (Not subsite). Example: jjbos.vdev or jjbos.local
+          * `alias (string, required)` _Must follow this pattern *.domain where * is going to be replaced with each subsite site_vhost_prefix that will have an entry in sites.php._
+      
 
 If you find a problem, incorrect comment, obsolete or improper code or such,
 please let us know by creating a new issue at
