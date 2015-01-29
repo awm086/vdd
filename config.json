@@ -6,7 +6,7 @@
       {
         "host_path": "/Users/ali/devbox/vdd/data",
         "guest_path": "/var/www",
-        "type": "nfs"
+        "type": "default"
       },
       {
         "host_path": "/Users/ali/.drush",
@@ -52,6 +52,7 @@
           "app_root": "JandJ",
           "document_root": "JandJ/docroot",
           "url": "sandbox.jjbos.vdev",
+          "domain": "jjbos.vdev",
           "alias": ["*.jjbos.vdev"]
         }
       }

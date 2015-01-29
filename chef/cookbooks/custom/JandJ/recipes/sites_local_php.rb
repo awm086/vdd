@@ -1,3 +1,13 @@
+#determine if it is an nfs
+nfs = 0
+node["vm"]["synced_folders"].each do |folder|
+  if folder['guest_path'] == '/var/www'
+    if folder['type'] == 'nfs'
+      nfs = 1
+    end
+  end
+end
+
 if node["vdd"]["sites"]
   node["vdd"]["sites"].each do |index, site|  
     
@@ -7,9 +17,11 @@ if node["vdd"]["sites"]
     file_name = path + "/sites.local.php"
     template file_name do
       source "sites.local.php.erb"
+      if nfs == 0
+        owner 'vagrant'
+        group 'vagrant'
+      end
       action :create
-      owner 'vagrant'
-      group 'vagrant'
       
     end
 
@@ -30,8 +42,8 @@ if node["vdd"]["sites"]
         dirs.each do |index|
           log index
           directory index do
-            owner 'vagrant'
-            group 'vagrant'
+           # owner 'vagrant'
+           # group 'vagrant'
             action :create
           end
         end
@@ -40,8 +52,8 @@ if node["vdd"]["sites"]
         template settings_name do
           source "settings.local.php.erb"
           action :create
-          owner 'vagrant'
-          group 'vagrant'
+          #owner 'vagrant'
+         # group 'vagrant'
             variables({
               :database_name => sub_site['database_name'] || 'jjbos',
               :database_prefix => sub_site["database_prefix"] || ''
@@ -53,8 +65,8 @@ if node["vdd"]["sites"]
         template settings_name do
           source "settings.php.erb"
           action :create
-          owner 'vagrant'
-          group 'vagrant'
+          #owner 'vagrant'
+          #group 'vagrant'
             variables({
               :database_name => sub_site['database_name'] || 'jjbos',
               :database_prefix => sub_site["database_prefix"] || ''
