@@ -1,3 +1,7 @@
+### Pre-requisites
+- Must stash access to jjbos platform codebase.
+- If you wish to use acquia utilities then you must have access to acquia instances and have the aliases downloaded. 
+  See https://docs.acquia.com/cloud/drush-aliases
 
 ### Note: 
 
@@ -163,8 +167,7 @@ valid. http://jsonlint.com/ can help to check it.
 
       * `type (string, Optional)`
         _For example default, rsync, nfs. _
-        Note: At the current stage, the only wway to get nfs to work is to set it for default at the initial 
-        creation of the vm and then modify config.json to set the type to nfs and run Vagrant reload. 
+        Note: NFS provides the fasted r/w access. However, on windows machines nfs is not supported use rsync or default. 
 
   * @TODO `php (object of strings, required)`
     _PHP configuration._

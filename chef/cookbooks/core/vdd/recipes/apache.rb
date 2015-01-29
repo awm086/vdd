@@ -21,6 +21,13 @@ group "www-data" do
   members "vagrant"
   append true
 end
+# Add vagrant to www-data group
+group "dialout" do
+  action :modify
+  members "vagrant"
+  append true
+end
+
 
 
 file "/var/www/index.html" do

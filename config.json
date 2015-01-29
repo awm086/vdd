@@ -6,7 +6,7 @@
       {
         "host_path": "/Users/ali/devbox/vdd/data",
         "guest_path": "/var/www",
-        "type": "default"
+        "type": "nfs"
       },
       {
         "host_path": "/Users/ali/.drush",
