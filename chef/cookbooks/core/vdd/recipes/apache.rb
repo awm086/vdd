@@ -1,4 +1,4 @@
-# Ddetermine if it is an nfs
+# Determine if the directory is NFS.
 nfs = 0
 node["vm"]["synced_folders"].each do |folder|
   if folder['guest_path'] == '/var/www'
