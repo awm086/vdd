@@ -37,13 +37,17 @@ if node["vdd"]["sites"]
           site_path + "/themes", 
           site_path + "/modules", 
           site_path + "/modules/contrib",
-           site_path + "/modules/custom"
+          site_path + "/modules/custom",
+          site_path + "/scripts",
         ]
         dirs.each do |index|
           log index
           directory index do
-           # owner 'vagrant'
-           # group 'vagrant'
+            if nfs == 0
+              owner 'vagrant'
+              group 'vagrant'
+            end
+            
             action :create
           end
         end
@@ -52,24 +56,45 @@ if node["vdd"]["sites"]
         template settings_name do
           source "settings.local.php.erb"
           action :create
-          #owner 'vagrant'
-         # group 'vagrant'
+          if nfs == 0
+            owner 'vagrant'
+            group 'vagrant'
+          end
+            variables({
+              :database_name => sub_site['database_name'] || 'jjbos',
+              :database_prefix => sub_site["database_prefix"] || '',
+              :site_dir => sub_site["site_dir"]
+            })
+        end
+
+        # Creat a settings.php
+        settings_name = site_path + "/settings.php"
+        template settings_name do
+          source "settings.php.erb"
+          action :create
+          if nfs == 0
+            owner 'vagrant'
+            group 'vagrant'
+          end
             variables({
               :database_name => sub_site['database_name'] || 'jjbos',
               :database_prefix => sub_site["database_prefix"] || ''
             })
         end
 
-        # Creat a settings.local.php
-        settings_name = site_path + "/settings.php"
-        template settings_name do
-          source "settings.php.erb"
+        # Create a script file in the site dirctory to help prepare and install
+
+        # Creat a settings.php
+        script_name = site_path + "/scripts/jjbos_dev_prepare.sh"
+        template script_name do
+          source "jjbos_dev_prepare.sh.erb"
           action :create
-          #owner 'vagrant'
-          #group 'vagrant'
+          if nfs == 0
+            owner 'vagrant'
+            group 'vagrant'
+          end
             variables({
-              :database_name => sub_site['database_name'] || 'jjbos',
-              :database_prefix => sub_site["database_prefix"] || ''
+              :site_dir => sub_site['site_dir']
             })
         end
         
