@@ -43,7 +43,7 @@ the source code.
      Download and unpack VDD source code and place it inside your home
      directory.
 
-  4. Adjust configuration (optional)
+  4. Adjust configuration 
      You can edit config.json file to adjust your settings. If you use VDD first
      time it's recommended to leave config.json as is. Sample config.json is
      just fine. By default Drupal 8 and Drupal 7 sites are configured.

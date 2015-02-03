@@ -62,6 +62,7 @@
       <li><a href="/phpmyadmin">phpMyAdmin</a></li>
       <li><a href="/phpinfo.php">phpinfo()</a></li>
       <li><a href="/webgrind">Webgrind</a></li>
+       <li><a href=":8983/solr/">solr</a></li>
     </ul>
 
     <h2 id="faq">FAQ</h2>
@@ -71,38 +72,19 @@
       <li><a href="#q1">Where can I find help?</a></li>
       <li><a href="#q2">How to ssh into virtual machine?</a></li>
       <li><a href="#q3">How to install fresh Drupal 8 version?</a></li>
-      <li><a href="#q4">How to quickly install Drupal 7?</a></li>
       <li><a href="#q5">What is Webgrind and how would I use it?</a></li>
     </ul>
 
     <h3>Answers</h3>
 
     <h4 id="q1">Where can I find help?</h4>
-    <p>Please check <a href="https://drupal.org/node/2008758">project documentation</a> on drupal.org. For support, join us on IRC in the <i>#drupal-vdd</i> channel.</p>
+
+      <p>Please check <a href="https://www.jjconsumer.com/wiki/display/DOD/Platform+Virtual+Machine">project documentation</a> </p>
 
     <h4 id="q2">How to ssh into virtual machine?</h4>
     <p>Open your terminal (e.g. iTerm2 or Powershell) application and change to the directory with your VDD copy. Then simply execute next command:</p>
     <ol class="code">
       <li>$ vagrant ssh</li>
-    </ol>
-
-    <h4 id="q3">How to install fresh Drupal 8 version?</h4>
-    <p>For this example we'll setup Drupal 8 on a site declared in the config.json: <em>drupal8 (in the default config.json)</em></p>
-    <ol class="code">
-      <li>Win/Mac/Linux host$ vagrant ssh</li>
-      <li>vagrant guest$ cd ~/sites/drupal8</li>
-      <li>vagrant guest$ git clone --branch 8.x http://git.drupal.org/project/drupal.git .</li>
-      <li>vagrant guest$ drush @drupal8 si standard -y</li>
-    </ol>
-
-    <h4 id="q4">How to quickly install Drupal 7?</h4>
-    <p>Make shure that appropriate site exists in config.json file. Don't forget to run 'vagrant provision' after changing config.json.</p>
-    <ol class="code">
-      <li>Win/Mac/Linux host$ vagrant ssh</li>
-      <li>vagrant guest$ rm -rf ~/sites/drupal7</li>
-      <li>vagrant guest$ cd ~/sites</li>
-      <li>vagrant guest$ drush dl drupal-7 --drupal-project-rename="drupal7"</li>
-      <li>vagrant guest$ drush @drupal7 si standard -y</li>
     </ol>
 
     <h4 id="q5">What is Webgrind and how do I use it?</h4>
