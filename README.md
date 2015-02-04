@@ -23,8 +23,6 @@ provisioner.
 The main goal of the project is to provide easy to use, fully functional, highly
 customizable and extendable Linux based environment for Drupal development.
 
-Full VDD documentation can be found on drupal.org:
-https://drupal.org/node/2008758
 
 For support, join us on IRC in the #drupal-vdd channel.
 
@@ -42,6 +40,7 @@ the source code.
      http://docs.vagrantup.com/v2/installation/index.html
 
   3. (Optional) Install Vagrant hostupdater.
+     `vagrant plugin uninstall vagrant-hostsupdater` 
 
   4. Prepare VDD source code
      Download and unpack VDD source code and place it inside your home
@@ -49,7 +48,7 @@ the source code.
 
   5. Adjust configuration 
      You can edit config.json file to adjust your settings. 
-     
+
   3. For SSH Agent Forwarding to work from within Vagrant (i.e., use your SSH keys from within your 'host' account from within Vagrant), you must add something along these lines to your .bashrc (or equiv) file (see https://coderwall.com/p/p3bj2a):
 ```
     # Path to your SSH private key:
