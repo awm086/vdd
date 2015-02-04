@@ -49,15 +49,6 @@ the source code.
   5. Adjust configuration 
      You can edit config.json file to adjust your settings. 
 
-  3. For SSH Agent Forwarding to work from within Vagrant (i.e., use your SSH keys from within your 'host' account from within Vagrant), you must add something along these lines to your .bashrc (or equiv) file (see https://coderwall.com/p/p3bj2a):
-```
-    # Path to your SSH private key:
-    key_file=~/.ssh/id_rsa
-        
-    # Add if not already added:
-    [[ -z $(ssh-add -L | grep $key_file) ]] && ssh-add $key_file
-``` 
-
   6. Build your environment
      Please double check your config.json file after editing. VDD can't start
      with invalid configuration. We recommend to use JSON validator.
