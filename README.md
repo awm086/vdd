@@ -40,7 +40,7 @@ the source code.
      http://docs.vagrantup.com/v2/installation/index.html
 
   3. (Optional) Install Vagrant hostupdater.
-     `vagrant plugin uninstall vagrant-hostsupdater` 
+     `vagrant plugin install vagrant-hostsupdater` 
 
   4. Prepare VDD source code
      Download and unpack VDD source code and place it inside your home
