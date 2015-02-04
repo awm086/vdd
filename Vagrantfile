@@ -17,11 +17,12 @@ Vagrant.configure("2") do |config|
       site['sub_sites'].each do |index, sub_site|
         hostname_aliases.push sub_site['site_vhost_prefix'] + '.' + site['vhost']['domain']
       end
+      config.vm.hostname = site['vhost']['domain']
+      config.hostsupdater.aliases = hostname_aliases
     end
  
   end
-   config.vm.hostname = "jjbos.vdev"
-   config.hostsupdater.aliases = hostname_aliases
+  
 
   # Permit the use of the host machine user's .ssh keys in ssh connections within the vm.
   # Note: These keys must be explicitly added to ssh-agent on the host machine.
