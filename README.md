@@ -1,5 +1,7 @@
 ### Pre-requisites
-- Must stash access to jjbos platform codebase.
+- Must have stash access to jjbos platform codebase.
+- If you wish to use acquia utilities then you must have access to acquia instances and have the aliases downloaded. 
+  See https://docs.acquia.com/cloud/drush-aliases
 - If you wish to use acquia utilities then you must have access to acquia instances and have the aliases downloaded. 
   See https://docs.acquia.com/cloud/drush-aliases
 
@@ -39,14 +41,23 @@ the source code.
   2. Install Vagrant
      http://docs.vagrantup.com/v2/installation/index.html
 
-  3. Prepare VDD source code
+  3. (Optional) Install Vagrant hostupdater.
+
+  4. Prepare VDD source code
      Download and unpack VDD source code and place it inside your home
      directory.
 
-  4. Adjust configuration 
-     You can edit config.json file to adjust your settings. If you use VDD first
-     time it's recommended to leave config.json as is. Sample config.json is
-     just fine. By default Drupal 8 and Drupal 7 sites are configured.
+  5. Adjust configuration 
+     You can edit config.json file to adjust your settings. 
+     
+  3. For SSH Agent Forwarding to work from within Vagrant (i.e., use your SSH keys from within your 'host' account from within Vagrant), you must add something along these lines to your .bashrc (or equiv) file (see https://coderwall.com/p/p3bj2a):
+```
+    # Path to your SSH private key:
+    key_file=~/.ssh/id_rsa
+        
+    # Add if not already added:
+    [[ -z $(ssh-add -L | grep $key_file) ]] && ssh-add $key_file
+``` 
 
   6. Build your environment
      Please double check your config.json file after editing. VDD can't start
