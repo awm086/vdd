@@ -39,6 +39,7 @@
     "recipe[vdd_example]",
     "recipe[JandJ::git_repo]",
     "recipe[JandJ::sites_local_php]",
+    "recipe[JandJ::jj_drush_aliases]",
     "recipe[oh-my-zsh-chef]",
     "recipe[java]",
     "recipe[ark]",

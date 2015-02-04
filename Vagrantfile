@@ -10,6 +10,19 @@ Vagrant.configure("2") do |config|
   # Configure networking.
   config.vm.network :private_network, ip: config_json["vm"]["ip"]
 
+    # Managing your /etc/hosts file for you via the vagrant-hostsupdater plugin.
+  if Vagrant.has_plugin?('vagrant-hostsupdater')
+    hostname_aliases = []
+    config_json["vdd"]["sites"].each do |index, site|
+      site['sub_sites'].each do |index, sub_site|
+        hostname_aliases.push sub_site['site_vhost_prefix'] + '.' + site['vhost']['domain']
+      end
+    end
+ 
+  end
+   config.vm.hostname = "jjbos.vdev"
+   config.hostsupdater.aliases = hostname_aliases
+
   # Permit the use of the host machine user's .ssh keys in ssh connections within the vm.
   # Note: These keys must be explicitly added to ssh-agent on the host machine.
   # See https://coderwall.com/p/p3bj2a
@@ -78,6 +91,7 @@ Vagrant.configure("2") do |config|
   end
 
 
+ 
   # Run final shell script.
   config.vm.provision :shell, :path => "chef/shell/final.sh", :args => config_json["vm"]["ip"]
 
