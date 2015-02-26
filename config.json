@@ -9,12 +9,14 @@
         "type": "nfs"
       },
       {
-        "host_path": "/Users/ali/.drush",
+        "comment" : " This is used to sync your drush aliases. If you don't have it please remove",
+        "host_path": "~/.drush",
         "guest_path": "/home/vagrant/.drush",
         "type": "nfs"
       },
       {
-        "host_path": "/Users/ali/.acquia",
+        "comment" : " This is used to sync your .acquia directory which holds your acquia key. If you don't have it please remove",
+        "host_path": "~/.acquia",
         "guest_path": "/home/vagrant/.acquia",
         "type": "nfs"
       }
