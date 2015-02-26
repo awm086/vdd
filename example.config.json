@@ -1,0 +1,61 @@
+{
+  "vm": {
+    "ip": "192.168.44.44",
+    "memory": "41024",
+    "synced_folders": [
+      {
+        "host_path": "data",
+        "guest_path": "/var/www",
+        "type": "nfs"
+      },
+      {
+        "host_path": "/Users/[USERNAME]/.drush",
+        "guest_path": "/home/vagrant/.drush",
+        "type": "nfs"
+      },
+      {
+        "host_path": "/Users/[USERNAME]/.acquia",
+        "guest_path": "/home/vagrant/.acquia",
+        "type": "nfs"
+      }
+    ],
+    "forwarded_ports": []
+  },
+  "map": {
+    "uid": "",
+    "gid": ""
+  },
+  "vdd": {
+    "sites": {
+      "jjbos": {
+        "account_name": "root",
+        "account_pass": "root",
+        "account_mail": "box@example.com",
+        "site_name": "jjbos",
+        "site_mail": "box@example.com",
+        "repo_url": "ssh://git@dev-stash.jjconsumer.com:7999/~amustafa/jjbos-platform.git",
+        "sub_sites":{
+          "sandbox":{
+            "site_dir": "sandbox",
+            "site_vhost_prefix": "sandbox",
+            "database_name": "sandbox",
+            "database_prefix": ""
+          },
+          "testsite":{
+            "site_dir": "testsite",
+            "site_vhost_prefix": "testsite",
+            "database_name": "testsite",
+            "database_prefix": ""
+          }          
+        },
+        "vhost": {
+          "app_root": "JandJ",
+          "document_root": "JandJ/docroot",
+          "url": "sandbox.jjbos.vdev",
+          "domain": "jjbos.vdev",
+          "alias": ["*.jjbos.vdev"]
+        }
+      }
+    }
+  }
+}
