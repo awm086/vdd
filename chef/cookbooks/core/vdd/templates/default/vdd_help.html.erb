@@ -28,19 +28,24 @@
 
     <h2 id="sites">Configured Sites</h2>
 
-    <h3>Add the following to host machine's <a href="http://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/" target="_blank">hosts file</a>:</h3>
+    <h3>Add the following to host machine's (if it has not been added automatically by hostupdater) <a href="http://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/" target="_blank">hosts file</a>:</h3>
     <ul class="code">
       <li># Sites declared in VDD's config.json</li>
+
       <% @sites.each do |index, site| %>
-        <%- if defined?(site["vhost"]["url"]) then -%>
-          <li><%= node["vm"]["ip"] %> <%= site["vhost"]["url"] %> </li>
-        <%- end -%>
-        <%- if defined?(site["vhost"]["alias"]) then -%>
-          <%- site["vhost"]["alias"].each do |vhostalias| -%>
-            <li><%= node["vm"]["ip"] %> <%= vhostalias %> </li>
+        
+        <% site['sub_sites'].each do |index, sub_site| %>
+          <%- if defined?(sub_site["site_vhost_prefix"]) then -%>
+            <li><%= node["vm"]["ip"] %> <%= sub_site["site_vhost_prefix"] +'.' + site["vhost"]["domain"] %> </li>
           <%- end -%>
         <%- end -%>
+
+        <%- if defined?(site["vhost"]["domain"]) then -%>
+          <li><%= node["vm"]["ip"] %> <%= site["vhost"]["domain"] %> </li>
+        <%- end -%>
+        
       <% end %>
+
       <li># End of sites declared with VDD</li>
     </ul>
 
