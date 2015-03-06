@@ -47,8 +47,9 @@ if node["vdd"]["sites"]
               owner 'vagrant'
               group 'vagrant'
             end
-            
+           
             action :create
+            mode "0755"
           end
         end
         # Creat a settings.local.php
