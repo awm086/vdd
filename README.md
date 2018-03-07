@@ -1,9 +1,3 @@
-### Pre-requisites
-- Must have stash access to jjbos platform codebase.
-- If you wish to use acquia utilities then you must have access to acquia instances and have the aliases downloaded. 
-  See https://docs.acquia.com/cloud/drush-aliases
-- If you wish to use acquia utilities then you must have access to acquia instances and have the aliases downloaded. 
-  See https://docs.acquia.com/cloud/drush-aliases
 
 ### Note: 
 
