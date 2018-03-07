@@ -211,7 +211,4 @@ valid. http://jsonlint.com/ can help to check it.
           * `alias (string, required)` _Must follow this pattern *.domain where * is going to be replaced with each subsite site_vhost_prefix that will have an entry in sites.php._
 
 
-If you find a problem, incorrect comment, obsolete or improper code or such,
-please let us know by creating a new issue at
-https://www.jjconsumer.com/jira/
 
